@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Holiday Inn - Luxury Accommodation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+ 
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showSection('home')">
+                <i class="fas fa-hotel"></i> Holiday Inn
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--navbar rows format in arrenge-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('about')">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('rooms')">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('services')">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('contact')">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('booking')">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="page-section active">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to Holiday Inn</h1>
+                <p>Experience luxury and comfort in the heart of the city</p>
+                <button class="btn btn-book-now" onclick="showSection('booking')">
+                    <i class="fas fa-calendar-alt"></i> Book Now
+                </button>
+            </div>
+        </div>
+
+        <!-- Featured Rooms Carousel -->
+        <div class="container section-padding">
+            <h2 class="text-center mb-5">Featured Rooms</h2>
+            <div id="roomCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!--slide 1-->
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Deluxe Suite">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Deluxe Suite</h5>
+                            <p>Luxury accommodation with city views</p>
+                        </div>
+                    </div>
+                    <!--slide 2-->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Standard Room">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Standard Room</h5>
+                            <p>Comfortable and affordable accommodation</p>
+                        </div>
+                    </div>
+                    <!--slide 3-->
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="d-block w-100" alt="Presidential Suite">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Presidential Suite</h5>
+                            <p>Ultimate luxury experience</p>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section section-padding">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 fade-in">
+                    <h2 class="mb-4">About Holiday Inn</h2>
+                    <p class="lead">Located in the heart of the city, Holiday Inn offers an unparalleled experience of luxury and comfort. Our hotel has been serving distinguished guests for over two decades.</p>
+                    <p>With our commitment to excellence, we provide world-class amenities, exceptional service, and an atmosphere that makes every guest feel at home. Our team of dedicated professionals ensures that your stay with us is memorable and comfortable.</p>
+                    <div class="row mt-4">
+
+                        <div class="col-md-6">
+                            <h5><i class="fas fa-award text-warning"></i> 25+ Years Experience</h5>
+                            <p>Serving guests with excellence since 1998</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5><i class="fas fa-users text-warning"></i> 500+ Happy Guests</h5>
+                            <p>Satisfied customers every month</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hotel Lobby" class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <!--lower in lines some photos-->
+            <div class="row">
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Restaurant" class="img-fluid rounded mb-3">
+                        <h5>Fine Dining</h5>
+                        <p>Experience culinary excellence at our award-winning restaurant.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Spa" class="img-fluid rounded mb-3">
+                        <h5>Luxury Spa</h5>
+                        <p>Relax and rejuvenate at our full-service spa and wellness center.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="text-center">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Business Center" class="img-fluid rounded mb-3">
+                        <h5>Business Center</h5>
+                        <p>State-of-the-art facilities for all your business needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="page-section section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Rooms</h2>
+            <div class="row">
+                <!--Standard Single Room-->
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Single Room">
+                        <div class="card-body">
+                            <h5 class="card-title">Standard Single Room</h5>
+                            <p class="card-text">Comfortable single room with all basic amenities, perfect for business travelers or solo adventurers.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bed text-primary"></i> 1 Single Bed</li>
+                                <li><i class="fas fa-wifi text-primary"></i> Free WiFi</li>
+                                <li><i class="fas fa-tv text-primary"></i> LED TV</li>
+                                <li><i class="fas fa-snowflake text-primary"></i> Air Conditioning</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Rs699/night</span>
+                                <button class="btn btn-primary" onclick="bookRoom('Standard Single Room', 99)">Book Room</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Deluxe Double Room-->
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Double Room">
+                        <div class="card-body">
+                            <h5 class="card-title">Deluxe Double Room</h5>
+                            <p class="card-text">Spacious double room with premium amenities and city views, ideal for couples or business executives.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bed text-primary"></i> 1 Double Bed</li>
+                                <li><i class="fas fa-wifi text-primary"></i> Free WiFi</li>
+                                <li><i class="fas fa-tv text-primary"></i> Smart TV</li>
+                                <li><i class="fas fa-coffee text-primary"></i> Mini Bar</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Rs1299/night</span>
+                                <button class="btn btn-primary" onclick="bookRoom('Deluxe Double Room', 149)">Book Room</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Presidential Suite-->
+                <div class="col-lg-4 col-md-6 mb-4 fade-in">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Deluxe Suite">
+                        <div class="card-body">
+                            <h5 class="card-title">Presidential Suite</h5>
+                            <p class="card-text">Ultimate luxury suite with separate living area, premium amenities, and breathtaking panoramic views.</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-bed text-primary"></i> King Size Bed</li>
+                                <li><i class="fas fa-couch text-primary"></i> Living Area</li>
+                                <li><i class="fas fa-bath text-primary"></i> Jacuzzi</li>
+                                <li><i class="fas fa-utensils text-primary"></i> Kitchenette</li>
+                            </ul>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price-tag">Rs1999/night</span>
+                                <button class="btn btn-primary" onclick="bookRoom('Presidential Suite', 299)">Book Room</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="page-section section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-wifi service-icon"></i>
+                        <h5>Free WiFi</h5>
+                        <p>High-speed internet access throughout the hotel for all guests.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-swimming-pool service-icon"></i>
+                        <h5>Swimming Pool</h5>
+                        <p>Outdoor pool with poolside bar service, open 24/7 for your relaxation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-concierge-bell service-icon"></i>
+                        <h5>Room Service</h5>
+                        <p>24/7 room service with extensive menu from our award-winning restaurant.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-parking service-icon"></i>
+                        <h5>Valet Parking</h5>
+                        <p>Complimentary valet parking service for all hotel guests.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-dumbbell service-icon"></i>
+                        <h5>Fitness Center</h5>
+                        <p>State-of-the-art gym equipment available 24/7 for your fitness needs.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-spa service-icon"></i>
+                        <h5>Spa & Wellness</h5>
+                        <p>Full-service spa offering massages, treatments, and wellness programs.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-utensils service-icon"></i>
+                        <h5>Restaurant</h5>
+                        <p>Fine dining restaurant serving international cuisine with local specialties.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 fade-in">
+                    <div class="text-center service-item">
+                        <i class="fas fa-car service-icon"></i>
+                        <h5>Airport Shuttle</h5>
+                        <p>Complimentary airport shuttle service available for all guests.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="page-section section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4">Book Your Stay</h2>
+                            <div id="bookingMessage"></div>
+                            <form id="bookingForm">
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="guestName" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control" id="guestName" required>
+                                        <div class="invalid-feedback">Please provide your full name.</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="guestEmail" class="form-label">Email Address *</label>
+                                        <input type="email" class="form-control" id="guestEmail" required>
+                                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="guestPhone" class="form-label">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="guestPhone" required>
+                                        <div class="invalid-feedback">Please provide your phone number.</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="roomType" class="form-label">Room Type *</label>
+                                        <select class="form-control" id="roomType" required>
+                                            <option value="">Select Room Type</option>
+                                            <option value="Standard Single Room">Standard Single Room - Rs699/night</option>
+                                            <option value="Deluxe Double Room">Deluxe Double Room - Rs1299/night</option>
+                                            <option value="Presidential Suite">Presidential Suite - Rs1999/night</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a room type.</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="checkIn" class="form-label">Check-in Date *</label>
+                                        <input type="date" class="form-control" id="checkIn" required>
+                                        <div class="invalid-feedback">Please select check-in date.</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="checkOut" class="form-label">Check-out Date *</label>
+                                        <input type="date" class="form-control" id="checkOut" required>
+                                        <div class="invalid-feedback">Please select check-out date.</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="guests" class="form-label">Number of Guests</label>
+                                        <select class="form-control" id="guests">
+                                            <option value="1">1 Guest</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="totalCost" class="form-label">Total Cost</label>
+                                        <input type="text" class="form-control" id="totalCost" readonly placeholder="Select dates to calculate">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="specialRequests" class="form-label">Special Requests</label>
+                                    <textarea class="form-control" id="specialRequests" rows="3" placeholder="Any special requests or preferences..."></textarea>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-calendar-check"></i> Confirm Booking
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section section-padding">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Send us a Message</h4>
+                            <div id="contactMessage"></div>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactName" class="form-label">Name *</label>
+                                        <input type="text" class="form-control" id="contactName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="contactEmail" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="contactEmail" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactSubject" class="form-label">Subject *</label>
+                                    <input type="text" class="form-control" id="contactSubject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contactMessage" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="contactMessageText" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--way for contact us to hotel-->
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h4 class="mb-4">Get in Touch</h4>
+                            <div class="contact-info">
+                                <div class="mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                    <strong>Address:</strong>
+                                    Survey No. 9, 2, Hinjawadi Rd, Hinjawadi, Pune, Pimpri-Chinchwad, Maharashtra 411057
+                                </div>
+                                <div class="mb-3">
+                                    <i class="fas fa-phone text-primary me-3"></i>
+                                    <strong>Phone:</strong><br>
+                                    020 4220 9111
+                                </div>
+                                <div class="mb-3">
+                                    <i class="fas fa-envelope text-primary me-3"></i>
+                                    <strong>Email:</strong><br>
+                                    info@holidayinn.com
+                                </div>
+                                <div class="mb-3">
+                                    <i class="fas fa-clock text-primary me-3"></i>
+                                    <strong>Front Desk:</strong><br>
+                                    24/7 Available
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Maps Embed -->
+                    <div class="card mt-4">
+                        <div class="card-body p-0">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121011.22811516361!2d73.59044269726564!3d18.592024199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb88136a2519%3A0x30f540a7b6d340ad!2sHoliday%20Inn%20Express%20Pune%20Hinjewadi%2C%20an%20IHG%20Hotel!5e0!3m2!1sen!2sin!4v1749886098255!5m2!1sen!2sin"
+                                width="100%" 
+                                height="250" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="fas fa-hotel"></i> Holiday InnI</h5>
+                    <p>Experience luxury and comfort in the heart of the city. Your satisfaction is our priority.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/omkar.pawarpatil.104" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="showSection('home')">Home</a></li>
+                        <li><a href="#" onclick="showSection('about')">About</a></li>
+                        <li><a href="#" onclick="showSection('rooms')">Rooms</a></li>
+                        <li><a href="#" onclick="showSection('services')">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Room Service</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Spa & Wellness</a></li>
+                        <li><a href="#">Airport Shuttle</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6>Newsletter</h6>
+                    <p>Subscribe to get special offers and updates.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-outline-secondary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; omkar. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3">Privacy Policy</a>
+                    <a href="#" class="me-3">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Global variables for booking data storage
+        let bookingData = {};
+        let contactMessages = [];
+
+        // Page Navigation
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update navbar active state
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            const body = document.body;
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                // Store preference in memory
+                window.darkModeEnabled = true;
+            } else {
+                darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                window.darkModeEnabled = false;
+            }
+        }
+
+        // Book Room Function
+        function bookRoom(roomType, price) {
+            showSection('booking');
+            document.getElementById('roomType').value = roomType;
+            
+            // Auto-fill price calculation if dates are available
+            const checkIn = document.getElementById('checkIn').value;
+            const checkOut = document.getElementById('checkOut').value;
+            
+            if (checkIn && checkOut) {
+                calculateTotalCost();
+            }
+        }
+
+        // Calculate Total Cost
+        function calculateTotalCost() {
+            const checkIn = document.getElementById('checkIn').value;
+            const checkOut = document.getElementById('checkOut').value;
+            const roomType = document.getElementById('roomType').value;
+            
+            if (checkIn && checkOut && roomType) {
+                const checkInDate = new Date(checkIn);
+                const checkOutDate = new Date(checkOut);
+                const timeDiff = checkOutDate.getTime() - checkInDate.getTime();
+                const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+                
+                if (daysDiff > 0) {
+                    let pricePerNight = 0;
+                    if (roomType.includes('Standard Single')) pricePerNight = 699;
+                    else if (roomType.includes('Deluxe Double')) pricePerNight = 1299;
+                    else if (roomType.includes('Presidential')) pricePerNight = 1999;
+                    
+                    const totalCost = daysDiff * pricePerNight;
+                    document.getElementById('totalCost').value = `Rs :${totalCost} (Rs ${daysDiff} nights × Rs ${pricePerNight})`;
+                } else {
+                    document.getElementById('totalCost').value = 'Invalid date range';
+                }
+            }
+        }
+
+        // Form Validation and Submission
+        function validateBookingForm() {
+            const form = document.getElementById('bookingForm');
+            const inputs = form.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+            
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                }
+            });
+            
+            // Email validation
+            const email = document.getElementById('guestEmail');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value && !emailPattern.test(email.value)) {
+                email.classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            // Date validation
+            const checkIn = document.getElementById('checkIn').value;
+            const checkOut = document.getElementById('checkOut').value;
+            const today = new Date().toISOString().split('T')[0];
+            
+            if (checkIn < today) {
+                document.getElementById('checkIn').classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            if (checkOut <= checkIn) {
+                document.getElementById('checkOut').classList.add('is-invalid');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+
+        function showMessage(elementId, message, type = 'success') {
+            const messageElement = document.getElementById(elementId);
+            messageElement.innerHTML = `
+                <div class="alert alert-${type === 'success' ? 'success' : 'danger'} alert-dismissible fade show" role="alert">
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `;
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set minimum date for booking
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('checkIn').min = today;
+            document.getElementById('checkOut').min = today;
+            
+            // Add event listeners for date changes
+            document.getElementById('checkIn').addEventListener('change', function() {
+                const checkInDate = this.value;
+                document.getElementById('checkOut').min = checkInDate;
+                calculateTotalCost();
+            });
+            
+            document.getElementById('checkOut').addEventListener('change', calculateTotalCost);
+            document.getElementById('roomType').addEventListener('change', calculateTotalCost);
+            
+            // Booking form submission
+            document.getElementById('bookingForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateBookingForm()) {
+                    // Store booking data in memory
+                    bookingData = {
+                        id: Date.now(),
+                        name: document.getElementById('guestName').value,
+                        email: document.getElementById('guestEmail').value,
+                        phone: document.getElementById('guestPhone').value,
+                        roomType: document.getElementById('roomType').value,
+                        checkIn: document.getElementById('checkIn').value,
+                        checkOut: document.getElementById('checkOut').value,
+                        guests: document.getElementById('guests').value,
+                        totalCost: document.getElementById('totalCost').value,
+                        specialRequests: document.getElementById('specialRequests').value,
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    showMessage('bookingMessage', 
+                        `<strong>Booking Confirmed!</strong><br>
+                        Booking ID: ${bookingData.id}<br>
+                        Thank you ${bookingData.name}! Your booking has been confirmed. 
+                        You will receive a confirmation email shortly at ${bookingData.email}.`, 
+                        'success'
+                    );
+                    
+                    // Reset form
+                    this.reset();
+                    document.getElementById('totalCost').value = '';
+                    
+                    // Remove validation classes
+                    const inputs = this.querySelectorAll('.is-valid, .is-invalid');
+                    inputs.forEach(input => {
+                        input.classList.remove('is-valid', 'is-invalid');
+                    });
+                    
+                    console.log('Booking stored:', bookingData);
+                } else {
+                    showMessage('bookingMessage', 
+                        'Please correct the errors in the form and try again.', 
+                        'error'
+                    );
+                }
+            });
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const contactData = {
+                    id: Date.now(),
+                    name: document.getElementById('contactName').value,
+                    email: document.getElementById('contactEmail').value,
+                    subject: document.getElementById('contactSubject').value,
+                    message: document.getElementById('contactMessageText').value,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Store contact message in memory
+                contactMessages.push(contactData);
+                
+                showMessage('contactMessage', 
+                    `<strong>Message Sent!</strong><br>
+                    Thank you ${contactData.name}! We have received your message and will get back to you within 24 hours.`, 
+                    'success'
+                );
+                
+                // Reset form
+                this.reset();
+                
+                console.log('Contact message stored:', contactData);
+            });
+            
+            // Add fade-in animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+        
+        // Utility function to get stored booking data
+        function getBookingData() {
+            return bookingData;
+        }
+        
+        // Utility function to get stored contact messages
+        function getContactMessages() {
+            return contactMessages;
+        }
+    </script>
+</body>
+</html>
